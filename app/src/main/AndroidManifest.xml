@@ -6,14 +6,35 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".sample"
+            android:label="@string/app_name"
+            android:configChanges="orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity
+            android:name="com.example.lucas.proyectofyg.TransitionEditActivity"
+            android:label="@string/title_activity_transition_edit"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".sample">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".sample"></meta-data>
+        </activity>
+        <activity
+            android:name="com.example.lucas.proyectofyg.TransitionAddActivity"
+            android:label="@string/title_activity_transition_add"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".sample">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".sample"></meta-data>
         </activity>
     </application>
 
